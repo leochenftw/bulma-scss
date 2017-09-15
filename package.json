@@ -1,49 +1,26 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "bulma",
-        "scope": null,
-        "escapedName": "bulma",
-        "name": "bulma",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
-      },
-      "/root"
-    ]
-  ],
-  "_from": "bulma@latest",
-  "_id": "bulma@0.5.1",
-  "_inCache": true,
-  "_installable": true,
+  "_from": "bulma",
+  "_id": "bulma@0.5.2",
+  "_inBundle": false,
+  "_integrity": "sha1-tcRpUHVwC5U5YZVVhA2PT5+Es6U=",
   "_location": "/bulma",
-  "_nodeVersion": "6.11.0",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/bulma-0.5.1.tgz_1502132843987_0.42938278312794864"
-  },
-  "_npmUser": {
-    "name": "jgthms",
-    "email": "bbxdesign@gmail.com"
-  },
-  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
+    "type": "tag",
+    "registry": true,
     "raw": "bulma",
-    "scope": null,
-    "escapedName": "bulma",
     "name": "bulma",
+    "escapedName": "bulma",
     "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
   "_requiredBy": [
-    "#USER"
+    "#USER",
+    "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.5.1.tgz",
-  "_shasum": "db2831c94afe732250c7b12527a7b792a4dc9ef8",
-  "_shrinkwrap": null,
+  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.5.2.tgz",
+  "_shasum": "b5c4695075700b9539619555840d8f4f9f84b3a5",
   "_spec": "bulma",
   "_where": "/root",
   "author": {
@@ -54,18 +31,14 @@
   "bugs": {
     "url": "https://github.com/jgthms/bulma/issues"
   },
-  "dependencies": {},
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "Modern CSS framework based on Flexbox",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "node-sass": "^4.5.3",
     "postcss-cli": "^4.1.0",
     "rimraf": "^2.6.1"
-  },
-  "directories": {},
-  "dist": {
-    "shasum": "db2831c94afe732250c7b12527a7b792a4dc9ef8",
-    "tarball": "https://registry.npmjs.org/bulma/-/bulma-0.5.1.tgz"
   },
   "files": [
     "css",
@@ -74,7 +47,6 @@
     "LICENSE",
     "README.md"
   ],
-  "gitHead": "459341ff8f014b02d3fb642239cee47277a918e1",
   "homepage": "http://bulma.io",
   "keywords": [
     "css",
@@ -85,15 +57,7 @@
   ],
   "license": "MIT",
   "main": "bulma.sass",
-  "maintainers": [
-    {
-      "name": "jgthms",
-      "email": "bbxdesign@gmail.com"
-    }
-  ],
   "name": "bulma",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jgthms/bulma.git"
@@ -113,5 +77,5 @@
     "test-sass": "node-sass --output-style expanded docs/bulma-test.sass docs/css/bulma-test.css"
   },
   "style": "bulma/css/bulma.css",
-  "version": "0.5.1"
+  "version": "0.5.2"
 }

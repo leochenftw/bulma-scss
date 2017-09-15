@@ -1,5 +1,26 @@
 # Bulma Changelog
 
+## 0.5.2
+
+### New features
+
+* #842 `navbar` color modifiers
+* #331 Support for third party icons
+* Added `$button-focus-box-shadow-size` and `$button-focus-box-shadow-color` for customization
+* Added `$input-focus-box-shadow-size` and `$input-focus-box-shadow-color` for customization
+* Navbar tabs
+
+### Issues closed
+
+* #1168 Undefined variable: `$navbar-item`
+* #930 Remove `vertical-align: top` for icons
+* #735 Font awesome custom `font-size`
+* #395 Font awesome stacked icons
+* #1152 Level-items not centered horizontally on mobile
+* #1147 Add `text-size-adjust: 100%` to `html`
+* #1106 `pagination` docs
+* #1063 `$family-primary` customization
+
 ## 0.5.1
 
 ### New features
@@ -10,7 +31,7 @@
 
 ### Issues closed
 
-* #1030 Add `!importnant` to non responsive display helpers
+* #1030 Add `!important` to non responsive display helpers
 * #1020 Customizing `.navbar-item img` max height
 * #998 `.navbar-dropdown` with **right** alignment
 * #877 `.pagination` isn't using `$pagination-background`
