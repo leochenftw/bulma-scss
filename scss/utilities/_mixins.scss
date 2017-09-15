@@ -139,7 +139,7 @@
   width: $dimensions;
 
   span {
-    background-color: $text;
+    background-color: currentColor;
     display: block;
     height: 1px;
     left: 50%;
@@ -164,14 +164,12 @@
   }
 
   &:hover {
-    background-color: $background;
+    background-color: rgba(black, 0.05);
   }
 
   // Modifers
   &.is-active {
     span {
-      background-color: $link;
-
       &:nth-child(1) {
         margin-left: -5px;
         transform: rotate(45deg);

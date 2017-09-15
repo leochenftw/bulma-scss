@@ -26,54 +26,47 @@
 
 // Typography
 
-@each $size in $sizes {
-  $i: index($sizes, $size);
+@mixin typography-size($target: "") {
+  @each $size in $sizes {
+    $i: index($sizes, $size);
 
-  .is-size-#{$i} {
-    font-size: $size !important;
-  }
-
-  @include mobile {
-    .is-size-#{$i}-mobile {
-      font-size: $size !important;
-    }
-  }
-
-
-  @include tablet {
-    .is-size-#{$i}-tablet {
-      font-size: $size !important;
-    }
-  }
-
-
-  @include touch {
-    .is-size-#{$i}-touch {
-      font-size: $size !important;
-    }
-  }
-
-
-  @include desktop {
-    .is-size-#{$i}-desktop {
-      font-size: $size !important;
-    }
-  }
-
-
-  @include widescreen {
-    .is-size-#{$i}-widescreen {
-      font-size: $size !important;
-    }
-  }
-
-
-  @include fullhd {
-    .is-size-#{$i}-fullhd {
+    .is-size-#{$i}#{if($target == "", "", "-" + $target)} {
       font-size: $size !important;
     }
   }
 }
+
+@include typography-size;
+
+@include mobile {
+  @include typography-size("mobile");
+}
+
+
+@include tablet {
+  @include typography-size("tablet");
+}
+
+
+@include touch {
+  @include typography-size("touch");
+}
+
+
+@include desktop {
+  @include typography-size("desktop");
+}
+
+
+@include widescreen {
+  @include typography-size("widescreen");
+}
+
+
+@include fullhd {
+  @include typography-size("fullhd");
+}
+
 
 $alignments: ("centered": "center", "left": "left", "right": "right");
 
@@ -176,6 +169,22 @@ $alignments: ("centered": "center", "left": "left", "right": "right");
   .has-text-#{$name} {
     color: $shade !important;
   }
+}
+
+.has-text-weight-light {
+  font-weight: $weight-light !important;
+}
+
+.has-text-weight-normal {
+  font-weight: $weight-normal !important;
+}
+
+.has-text-weight-semibold {
+  font-weight: $weight-semibold !important;
+}
+
+.has-text-weight-bold {
+  font-weight: $weight-bold !important;
 }
 
 // Visibility

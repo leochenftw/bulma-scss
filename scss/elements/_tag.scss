@@ -1,6 +1,7 @@
 $tag-background-color: $background !default;
 $tag-color: $text !default;
 $tag-radius: $radius !default;
+$tag-delete-margin: 1px !default;
 
 .tags {
   align-items: center;
@@ -41,7 +42,7 @@ $tag-radius: $radius !default;
   }
 }
 
-.tag {
+.tag:not(body) {
   align-items: center;
   background-color: $tag-background-color;
   border-radius: $tag-radius;
@@ -82,7 +83,7 @@ $tag-radius: $radius !default;
 
   // Modifiers
   &.is-delete {
-    margin-left: 1px;
+    margin-left: $tag-delete-margin;
     padding: 0;
     position: relative;
     width: 2em;

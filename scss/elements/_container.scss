@@ -1,10 +1,8 @@
-$container-offset: 60px !default;
-
 .container {
   margin: 0 auto;
   position: relative;
 
-  @include from($desktop + $container-offset) {
+  @include from($desktop) {
     max-width: $desktop - 2 * $gap;
     width: $desktop - 2 * $gap;
 
@@ -17,7 +15,7 @@ $container-offset: 60px !default;
   }
 
 
-  @include until($widescreen + $container-offset) {
+  @include until($widescreen) {
     &.is-widescreen {
       max-width: $widescreen - 2 * $gap;
       width: auto;
@@ -25,7 +23,7 @@ $container-offset: 60px !default;
   }
 
 
-  @include until($fullhd + $container-offset) {
+  @include until($fullhd) {
     &.is-fullhd {
       max-width: $fullhd - 2 * $gap;
       width: auto;
@@ -33,13 +31,13 @@ $container-offset: 60px !default;
   }
 
 
-  @include from($widescreen + $container-offset) {
+  @include from($widescreen) {
     max-width: $widescreen - 2 * $gap;
     width: $widescreen - 2 * $gap;
   }
 
 
-  @include from($fullhd + $container-offset) {
+  @include from($fullhd) {
     max-width: $fullhd - 2 * $gap;
     width: $fullhd - 2 * $gap;
   }
