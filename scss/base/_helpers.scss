@@ -29,7 +29,6 @@
 @mixin typography-size($target: "") {
   @each $size in $sizes {
     $i: index($sizes, $size);
-
     .is-size-#{$i}#{if($target == "", "", "-" + $target)} {
       font-size: $size !important;
     }
@@ -68,19 +67,17 @@
 }
 
 
-$alignments: ("centered": "center", "left": "left", "right": "right");
+$alignments: ("centered": "center", "justified": "justify", "left": "left", "right": "right");
 
 @each $alignment, $text-align in $alignments {
   .has-text-#{$alignment} {
     text-align: #{$text-align} !important;
   }
-
   @include mobile {
     .has-text-#{$alignment}-mobile {
       text-align: #{$text-align} !important;
     }
   }
-
 
   @include tablet {
     .has-text-#{$alignment}-tablet {
@@ -88,13 +85,11 @@ $alignments: ("centered": "center", "left": "left", "right": "right");
     }
   }
 
-
   @include tablet-only {
     .has-text-#{$alignment}-tablet-only {
       text-align: #{$text-align} !important;
     }
   }
-
 
   @include touch {
     .has-text-#{$alignment}-touch {
@@ -102,13 +97,11 @@ $alignments: ("centered": "center", "left": "left", "right": "right");
     }
   }
 
-
   @include desktop {
     .has-text-#{$alignment}-desktop {
       text-align: #{$text-align} !important;
     }
   }
-
 
   @include desktop-only {
     .has-text-#{$alignment}-desktop-only {
@@ -116,20 +109,17 @@ $alignments: ("centered": "center", "left": "left", "right": "right");
     }
   }
 
-
   @include widescreen {
     .has-text-#{$alignment}-widescreen {
       text-align: #{$text-align} !important;
     }
   }
 
-
   @include widescreen-only {
     .has-text-#{$alignment}-widescreen-only {
       text-align: #{$text-align} !important;
     }
   }
-
 
   @include fullhd {
     .has-text-#{$alignment}-fullhd {
@@ -152,11 +142,9 @@ $alignments: ("centered": "center", "left": "left", "right": "right");
 
 @each $name, $pair in $colors {
   $color: nth($pair, 1);
-
   .has-text-#{$name} {
     color: $color !important;
   }
-
   a.has-text-#{$name} {
     &:hover,
     &:focus {
@@ -195,13 +183,11 @@ $displays: "block" "flex" "inline" "inline-block" "inline-flex";
   .is-#{$display} {
     display: #{$display} !important;
   }
-
   @include mobile {
     .is-#{$display}-mobile {
       display: #{$display} !important;
     }
   }
-
 
   @include tablet {
     .is-#{$display}-tablet {
@@ -209,13 +195,11 @@ $displays: "block" "flex" "inline" "inline-block" "inline-flex";
     }
   }
 
-
   @include tablet-only {
     .is-#{$display}-tablet-only {
       display: #{$display} !important;
     }
   }
-
 
   @include touch {
     .is-#{$display}-touch {
@@ -223,13 +207,11 @@ $displays: "block" "flex" "inline" "inline-block" "inline-flex";
     }
   }
 
-
   @include desktop {
     .is-#{$display}-desktop {
       display: #{$display} !important;
     }
   }
-
 
   @include desktop-only {
     .is-#{$display}-desktop-only {
@@ -237,20 +219,17 @@ $displays: "block" "flex" "inline" "inline-block" "inline-flex";
     }
   }
 
-
   @include widescreen {
     .is-#{$display}-widescreen {
       display: #{$display} !important;
     }
   }
 
-
   @include widescreen-only {
     .is-#{$display}-widescreen-only {
       display: #{$display} !important;
     }
   }
-
 
   @include fullhd {
     .is-#{$display}-fullhd {

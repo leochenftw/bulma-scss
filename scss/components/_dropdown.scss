@@ -17,14 +17,12 @@ $dropdown-divider-background-color: $border !default;
   display: inline-flex;
   position: relative;
   vertical-align: top;
-
   &.is-active,
   &.is-hoverable:hover {
     .dropdown-menu {
       display: block;
     }
   }
-
   &.is-right {
     .dropdown-menu {
       left: auto;
@@ -63,12 +61,10 @@ $dropdown-divider-background-color: $border !default;
 a.dropdown-item {
   padding-right: 3rem;
   white-space: nowrap;
-
   &:hover {
     background-color: $dropdown-item-hover-background-color;
     color: $dropdown-item-hover-color;
   }
-
   &.is-active {
     background-color: $dropdown-item-active-background-color;
     color: $dropdown-item-active-color;

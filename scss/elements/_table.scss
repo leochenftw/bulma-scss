@@ -23,52 +23,43 @@ $table-striped-row-even-hover-background-color: $white-ter !default;
   background-color: $table-background-color;
   color: $table-color;
   margin-bottom: 1.5rem;
-
   td,
   th {
     border: $table-cell-border;
     border-width: $table-cell-border-width;
     padding: $table-cell-padding;
     vertical-align: top;
-
     // Colors
     @each $name, $pair in $colors {
       $color: nth($pair, 1);
       $color-invert: nth($pair, 2);
-
       &.is-#{$name} {
         background-color: $color;
         border-color: $color;
         color: $color-invert;
       }
     }
-
     // Modifiers
     &.is-narrow {
       white-space: nowrap;
       width: 1%;
     }
   }
-
   th {
     color: $table-cell-heading-color;
     text-align: left;
   }
-
   tr {
     &:hover {
       background-color: $table-row-hover-background-color;
     }
-
     &.is-selected {
       background-color: $table-row-active-background-color;
       color: $table-row-active-color;
-
       a,
       strong {
         color: currentColor;
       }
-
       td,
       th {
         border-color: $table-row-active-color;
@@ -76,7 +67,6 @@ $table-striped-row-even-hover-background-color: $white-ter !default;
       }
     }
   }
-
   thead {
     td,
     th {
@@ -84,7 +74,6 @@ $table-striped-row-even-hover-background-color: $white-ter !default;
       color: $table-head-cell-color;
     }
   }
-
   tfoot {
     td,
     th {
@@ -92,7 +81,6 @@ $table-striped-row-even-hover-background-color: $white-ter !default;
       color: $table-foot-cell-color;
     }
   }
-
   tbody {
     tr {
       &:last-child {
@@ -103,14 +91,12 @@ $table-striped-row-even-hover-background-color: $white-ter !default;
       }
     }
   }
-
   // Modifiers
   &.is-bordered {
     td,
     th {
       border-width: 1px;
     }
-
     tr {
       &:last-child {
         td,
@@ -120,24 +106,20 @@ $table-striped-row-even-hover-background-color: $white-ter !default;
       }
     }
   }
-
   &.is-fullwidth {
     width: 100%;
   }
-
   &.is-narrow {
     td,
     th {
       padding: 0.25em 0.5em;
     }
   }
-
   &.is-striped {
     tbody {
       tr:not(.is-selected) {
         &:nth-child(even) {
           background-color: $table-striped-row-even-background-color;
-
           &:hover {
             background-color: $table-striped-row-even-hover-background-color;
           }

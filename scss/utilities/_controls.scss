@@ -22,7 +22,6 @@ $control-padding-horizontal: calc(0.625em - 1px) !default;
   padding-top: $control-padding-vertical;
   position: relative;
   vertical-align: top;
-
   // States
   &:focus,
   &.is-focused,
@@ -30,7 +29,6 @@ $control-padding-horizontal: calc(0.625em - 1px) !default;
   &.is-active {
     outline: none;
   }
-
   &[disabled] {
     cursor: not-allowed;
   }

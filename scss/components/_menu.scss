@@ -11,16 +11,13 @@ $menu-label-color: $text-light !default;
 
 .menu {
   font-size: $size-normal;
-
   // Sizes
   &.is-small {
     font-size: $size-small;
   }
-
   &.is-medium {
     font-size: $size-medium;
   }
-
   &.is-large {
     font-size: $size-large;
   }
@@ -28,25 +25,21 @@ $menu-label-color: $text-light !default;
 
 .menu-list {
   line-height: 1.25;
-
   a {
     border-radius: $menu-item-radius;
     color: $menu-item-color;
     display: block;
     padding: 0.5em 0.75em;
-
     &:hover {
       background-color: $menu-item-hover-background-color;
       color: $menu-item-hover-color;
     }
-
     // Modifiers
     &.is-active {
       background-color: $menu-item-active-background-color;
       color: $menu-item-active-color;
     }
   }
-
   li {
     ul {
       border-left: $menu-list-border-left;
@@ -61,11 +54,9 @@ $menu-label-color: $text-light !default;
   font-size: 0.75em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
   &:not(:first-child) {
     margin-top: 1em;
   }
-
   &:not(:last-child) {
     margin-bottom: 1em;
   }

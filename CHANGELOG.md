@@ -1,5 +1,19 @@
 # Bulma Changelog
 
+## 0.5.3
+
+### New features
+
+* #1101 `.card-header-title` can be centered with `.is-centered`
+* #1189 `.input` readonly and `.is-static`
+* #1189 `.textarea` readonly
+
+### Issues closed
+
+* #1177 Fix `.message .tag` combination
+* #1167 Fix `pre code`
+* #1207 Fix `.breadcrumb` alignment
+
 ## 0.5.2
 
 ### New features
@@ -37,7 +51,7 @@
 * #877 `.pagination` isn't using `$pagination-background`
 * #989 `navbar-brand` overflowing on mobile
 * #975 Variable `$table-head-color` isn't used
-* #964 Tabs sass file throwing error with `!important`
+* #964 Tabs scss file throwing error with `!important`
 * #949 `.is-size-7` helper is missing
 
 ## 0.5.0
@@ -358,7 +372,7 @@ Variable name changes (mostly appending `-color`):
 
 ## 0.0.25
 
-* Added: `utilities/controls.sass` and `elements/form.sass`
+* Added: `utilities/controls.scss` and `elements/form.scss`
 * Added: new responsive classes
 * Added: white/black and light/dark colors
 * Changed: `.tabs` need `.icon` now
@@ -387,8 +401,8 @@ Variable name changes (mostly appending `-color`):
 
 ### BREAKING
 
-* `bulma` folder renamed to `sass` to avoid the redundant `bulma/bulma` path
-* `variables.sass` moved to `/utilities`
+* `bulma` folder renamed to `scss` to avoid the redundant `bulma/bulma` path
+* `variables.scss` moved to `/utilities`
 * almost everything is singular now
 * **elements** only have one class
 * **components** have at least one sub-class

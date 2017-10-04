@@ -68,11 +68,9 @@ a {
   color: $link;
   cursor: pointer;
   text-decoration: none;
-
   strong {
     color: currentColor;
   }
-
   &:hover {
     color: $link-hover;
   }
@@ -121,21 +119,19 @@ strong {
 // Block
 
 pre {
+  @include overflow-touch;
   background-color: $pre-background;
   color: $pre;
   font-size: 0.875em;
+  overflow-x: auto;
+  padding: 1.25rem 1.5rem;
   white-space: pre;
   word-wrap: normal;
-
   code {
-    @include overflow-touch;
-
-    background: none;
-    color: inherit;
-    display: block;
+    background-color: transparent;
+    color: currentColor;
     font-size: 1em;
-    overflow-x: auto;
-    padding: 1.25rem 1.5rem;
+    padding: 0;
   }
 }
 
@@ -145,7 +141,6 @@ table {
     text-align: left;
     vertical-align: top;
   }
-
   th {
     color: $text-strong;
   }
