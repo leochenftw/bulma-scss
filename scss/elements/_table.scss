@@ -50,9 +50,6 @@ $table-striped-row-even-hover-background-color: $white-ter !default;
     text-align: left;
   }
   tr {
-    &:hover {
-      background-color: $table-row-hover-background-color;
-    }
     &.is-selected {
       background-color: $table-row-active-background-color;
       color: $table-row-active-color;
@@ -109,6 +106,24 @@ $table-striped-row-even-hover-background-color: $white-ter !default;
   &.is-fullwidth {
     width: 100%;
   }
+  &.is-hoverable {
+    tbody {
+      tr {
+        &:hover {
+          background-color: $table-row-hover-background-color;
+        }
+      }
+    }
+    &.is-striped {
+      tbody {
+        tr:not(.is-selected) {
+          &:hover {
+            background-color: $table-striped-row-even-hover-background-color;
+          }
+        }
+      }
+    }
+  }
   &.is-narrow {
     td,
     th {
@@ -120,9 +135,6 @@ $table-striped-row-even-hover-background-color: $white-ter !default;
       tr:not(.is-selected) {
         &:nth-child(even) {
           background-color: $table-striped-row-even-background-color;
-          &:hover {
-            background-color: $table-striped-row-even-hover-background-color;
-          }
         }
       }
     }

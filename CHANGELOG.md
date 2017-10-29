@@ -1,5 +1,91 @@
 # Bulma Changelog
 
+## 0.6.0
+
+### Breaking changes
+
+* The new `$link` color is part of the `$colors` map. As a result, `.button.is-link` is a colored button now. Use `.button.is-text` if you want the underlined button.
+* The deprecated `variables.sass` file has been removed.
+* The deprecated `nav.sass` file has been removed.
+
+### New features
+
+* #1236 `.table` hover effect is opt-in, by using the `.is-hoverable` modifier class
+* #1254 `.dropdown` now supports `.is-up` modifier
+
+### Improvements
+
+* #1257 Include placeholder mixin in `=input`
+
+The `$link` color is used instead of `$primary` in the following components:
+
+<table>
+  <tr>
+    <th>Variable</th>
+    <th>Old value</th>
+    <th>New value</th>
+  </tr>
+  <tr>
+    <td><code>$dropdown-item-active-color</code></td>
+    <td><code>$primary-invert</code></td>
+    <td><code>$link-invert</code></td>
+  </tr>
+  <tr>
+    <td><code>$dropdown-item-active-background-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$navbar-tab-hover-border-bottom-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$navbar-tab-active-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$navbar-tab-active-border-bottom-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$navbar-dropdown-item-active-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$tabs-link-active-border-bottom-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$tabs-link-active-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$tabs-toggle-link-active-background-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$tabs-toggle-link-active-border-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$tabs-toggle-link-active-color</code></td>
+    <td><code>$primary-invert</code></td>
+    <td><code>$link-invert</code></td>
+  </tr>
+</table>
+
+### Issues closed
+
+* #708 Import variables in mixins
+
 ## 0.5.3
 
 ### New features
@@ -51,7 +137,7 @@
 * #877 `.pagination` isn't using `$pagination-background`
 * #989 `navbar-brand` overflowing on mobile
 * #975 Variable `$table-head-color` isn't used
-* #964 Tabs scss file throwing error with `!important`
+* #964 Tabs sass file throwing error with `!important`
 * #949 `.is-size-7` helper is missing
 
 ## 0.5.0
@@ -262,7 +348,7 @@ Variable name changes (mostly appending `-color`):
 * Split icon container dimensions and icon size
 * Fix delete button by using pixels instead of (r)em
 * Fix level on mobile
-* Add new `.is-spaced` modifer for titles and subtitles
+* Add new `.is-spaced` modifier for titles and subtitles
 
 * Fix #487
 * Fix #489
@@ -372,7 +458,7 @@ Variable name changes (mostly appending `-color`):
 
 ## 0.0.25
 
-* Added: `utilities/controls.scss` and `elements/form.scss`
+* Added: `utilities/controls.sass` and `elements/form.sass`
 * Added: new responsive classes
 * Added: white/black and light/dark colors
 * Changed: `.tabs` need `.icon` now
@@ -401,8 +487,8 @@ Variable name changes (mostly appending `-color`):
 
 ### BREAKING
 
-* `bulma` folder renamed to `scss` to avoid the redundant `bulma/bulma` path
-* `variables.scss` moved to `/utilities`
+* `bulma` folder renamed to `sass` to avoid the redundant `bulma/bulma` path
+* `variables.sass` moved to `/utilities`
 * almost everything is singular now
 * **elements** only have one class
 * **components** have at least one sub-class
