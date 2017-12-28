@@ -25,6 +25,7 @@ $panel-icon-color: $text-light !default;
 
 .panel {
   font-size: $size-normal;
+
   &:not(:last-child) {
     margin-bottom: 1.5rem;
   }
@@ -36,6 +37,7 @@ $panel-icon-color: $text-light !default;
   border-bottom: $panel-item-border;
   border-left: $panel-item-border;
   border-right: $panel-item-border;
+
   &:first-child {
     border-top: $panel-item-border;
   }
@@ -56,10 +58,12 @@ $panel-icon-color: $text-light !default;
   display: flex;
   font-size: 0.875em;
   justify-content: center;
+
   a {
     border-bottom: $panel-tab-border-bottom;
     margin-bottom: -1px;
     padding: 0.5em;
+
     // Modifiers
     &.is-active {
       border-bottom-color: $panel-tab-active-border-bottom-color;
@@ -71,6 +75,7 @@ $panel-icon-color: $text-light !default;
 .panel-list {
   a {
     color: $panel-list-item-color;
+
     &:hover {
       color: $panel-list-item-hover-color;
     }
@@ -83,20 +88,25 @@ $panel-icon-color: $text-light !default;
   display: flex;
   justify-content: flex-start;
   padding: 0.5em 0.75em;
+
   input[type="checkbox"] {
     margin-right: 0.75em;
   }
+
   & > .control {
     flex-grow: 1;
     flex-shrink: 1;
     width: 100%;
   }
+
   &.is-wrapped {
     flex-wrap: wrap;
   }
+
   &.is-active {
     border-left-color: $panel-block-active-border-left-color;
     color: $panel-block-active-color;
+
     .panel-icon {
       color: $panel-block-active-icon-color;
     }
@@ -106,6 +116,7 @@ $panel-icon-color: $text-light !default;
 a.panel-block,
 label.panel-block {
   cursor: pointer;
+
   &:hover {
     background-color: $panel-block-hover-background-color;
   }
@@ -113,8 +124,10 @@ label.panel-block {
 
 .panel-icon {
   @include fa(14px, 1em);
+
   color: $panel-icon-color;
   margin-right: 0.75em;
+
   .fa {
     font-size: inherit;
     line-height: inherit;

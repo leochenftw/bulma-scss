@@ -1,8 +1,8 @@
 {
   "_from": "bulma",
-  "_id": "bulma@0.6.0",
+  "_id": "bulma@0.6.1",
   "_inBundle": false,
-  "_integrity": "sha1-T1xd5YKBDRGqDPsfMK7Ip5LQ2Sw=",
+  "_integrity": "sha1-XyGnfAwG99gAUcBmKMI1Fggb1kk=",
   "_location": "/bulma",
   "_phantomChildren": {},
   "_requested": {
@@ -19,10 +19,10 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.6.0.tgz",
-  "_shasum": "4f5c5de582810d11aa0cfb1f30aec8a792d0d92c",
+  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.6.1.tgz",
+  "_shasum": "5f21a77c0c06f7d80051c06628c23516081bd649",
   "_spec": "bulma",
-  "_where": "/Users/leochen/Armory",
+  "_where": "/Users/leochen",
   "author": {
     "name": "Jeremy Thomas",
     "email": "bbxdesign@gmail.com",
@@ -47,7 +47,7 @@
     "LICENSE",
     "README.md"
   ],
-  "homepage": "http://bulma.io",
+  "homepage": "https://bulma.io",
   "keywords": [
     "css",
     "sass",
@@ -77,5 +77,5 @@
     "test-sass": "node-sass --output-style expanded docs/bulma-test.sass docs/css/bulma-test.css"
   },
   "style": "bulma/css/bulma.css",
-  "version": "0.6.0"
+  "version": "0.6.1"
 }

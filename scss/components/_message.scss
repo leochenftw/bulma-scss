@@ -16,26 +16,33 @@ $message-body-pre-code-background-color: transparent !default;
 
 .message {
   @include block;
+
   background-color: $message-background-color;
   border-radius: $message-radius;
   font-size: $size-normal;
+
   strong {
     color: currentColor;
   }
+
   a:not(.button):not(.tag) {
     color: currentColor;
     text-decoration: underline;
   }
+
   // Sizes
   &.is-small {
     font-size: $size-small;
   }
+
   &.is-medium {
     font-size: $size-medium;
   }
+
   &.is-large {
     font-size: $size-large;
   }
+
   // Colors
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
@@ -44,12 +51,15 @@ $message-body-pre-code-background-color: transparent !default;
     $color-luminance: colorLuminance($color);
     $darken-percentage: $color-luminance * 70%;
     $desaturate-percentage: $color-luminance * 30%;
+
     &.is-#{$name} {
       background-color: lighten($color, $color-lightning);
+
       .message-header {
         background-color: $color;
         color: $color-invert;
       }
+
       .message-body {
         border-color: $color;
         color: desaturate(darken($color, $darken-percentage), $desaturate-percentage);
@@ -68,11 +78,13 @@ $message-body-pre-code-background-color: transparent !default;
   line-height: 1.25;
   padding: $message-header-padding;
   position: relative;
+
   .delete {
     flex-grow: 0;
     flex-shrink: 0;
     margin-left: 0.75em;
   }
+
   & + .message-body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -85,10 +97,12 @@ $message-body-pre-code-background-color: transparent !default;
   border-radius: $message-body-radius;
   color: $message-body-color;
   padding: $message-body-padding;
+
   code,
   pre {
     background-color: $message-body-pre-background-color;
   }
+
   pre code {
     background-color: $message-body-pre-code-background-color;
   }
