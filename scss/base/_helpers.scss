@@ -150,6 +150,10 @@ $alignments: ("centered": "center", "justified": "justify", "left": "left", "rig
   text-transform: uppercase !important;
 }
 
+.is-italic {
+  font-style: italic !important;
+}
+
 @each $name, $pair in $colors {
   $color: nth($pair, 1);
 
