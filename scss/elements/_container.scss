@@ -1,9 +1,11 @@
 .container {
   margin: 0 auto;
   position: relative;
+
   @include from($desktop) {
     max-width: $desktop - 2 * $gap;
     width: $desktop - 2 * $gap;
+
     &.is-fluid {
       margin-left: $gap;
       margin-right: $gap;
@@ -12,12 +14,14 @@
     }
   }
 
+
   @include until($widescreen) {
     &.is-widescreen {
       max-width: $widescreen - 2 * $gap;
       width: auto;
     }
   }
+
 
   @include until($fullhd) {
     &.is-fullhd {
@@ -26,10 +30,12 @@
     }
   }
 
+
   @include from($widescreen) {
     max-width: $widescreen - 2 * $gap;
     width: $widescreen - 2 * $gap;
   }
+
 
   @include from($fullhd) {
     max-width: $fullhd - 2 * $gap;

@@ -10,6 +10,7 @@
   pointer-events: none;
   position: absolute;
   transform: rotate(-45deg);
+  transform-origin: center;
   width: 0.5em;
 }
 
@@ -29,6 +30,7 @@
 
 @mixin center($width, $height: 0) {
   position: absolute;
+
   @if $height != 0 {
     left: calc(50% - (#{$width} / 2));
     top: calc(50% - (#{$height} / 2));
@@ -41,16 +43,17 @@
 
 @mixin delete {
   @include unselectable;
+
   -moz-appearance: none;
   -webkit-appearance: none;
   background-color: rgba($black, 0.2);
   border: none;
-  border-radius: 290486px;
+  border-radius: $radius-rounded;
   cursor: pointer;
   display: inline-block;
   flex-grow: 0;
   flex-shrink: 0;
-  font-size: $size-normal;
+  font-size: 0;
   height: 20px;
   max-height: 20px;
   max-width: 20px;
@@ -60,6 +63,7 @@
   position: relative;
   vertical-align: top;
   width: 20px;
+
   &:before,
   &:after {
     background-color: $white;
@@ -71,21 +75,26 @@
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform-origin: center center;
   }
+
   &:before {
     height: 2px;
     width: 50%;
   }
+
   &:after {
     height: 50%;
     width: 2px;
   }
+
   &:hover,
   &:focus {
     background-color: rgba($black, 0.3);
   }
+
   &:active {
     background-color: rgba($black, 0.4);
   }
+
   // Sizes
   &.is-small {
     height: 16px;
@@ -95,6 +104,7 @@
     min-width: 16px;
     width: 16px;
   }
+
   &.is-medium {
     height: 24px;
     max-height: 24px;
@@ -103,6 +113,7 @@
     min-width: 24px;
     width: 24px;
   }
+
   &.is-large {
     height: 32px;
     max-height: 32px;
@@ -129,45 +140,49 @@
   height: $dimensions;
   position: relative;
   width: $dimensions;
+
   span {
     background-color: currentColor;
     display: block;
     height: 1px;
-    left: 50%;
-    margin-left: -7px;
+    left: calc(50% - 8px);
     position: absolute;
-    top: 50%;
-    transition: none $speed $easing;
-    transition-property: background, left, opacity, transform;
-    width: 15px;
+    transform-origin: center;
+    transition-duration: $speed;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: $easing;
+    width: 16px;
+
     &:nth-child(1) {
-      margin-top: -6px;
+      top: calc(50% - 6px);
     }
+
     &:nth-child(2) {
-      margin-top: -1px;
+      top: calc(50% - 1px);
     }
+
     &:nth-child(3) {
-      margin-top: 4px;
+      top: calc(50% + 4px);
     }
   }
+
   &:hover {
     background-color: rgba(black, 0.05);
   }
+
   // Modifers
   &.is-active {
     span {
       &:nth-child(1) {
-        margin-left: -5px;
-        transform: rotate(45deg);
-        transform-origin: left top;
+        transform: translateY(5px) rotate(45deg);
       }
+
       &:nth-child(2) {
         opacity: 0;
       }
+
       &:nth-child(3) {
-        margin-left: -5px;
-        transform: rotate(-45deg);
-        transform-origin: left bottom;
+        transform: translateY(-5px) rotate(-45deg);
       }
     }
   }
@@ -176,7 +191,7 @@
 @mixin loader {
   animation: spinAround 500ms infinite linear;
   border: 2px solid $border;
-  border-radius: 290486px;
+  border-radius: $radius-rounded;
   border-right-color: transparent;
   border-top-color: transparent;
   content: "";
@@ -200,6 +215,7 @@
 
 @mixin placeholder {
   $placeholders: ":-moz" ":-webkit-input" "-moz" "-ms-input";
+
   @each $placeholder in $placeholders {
     &:#{$placeholder}-placeholder {
       @content;

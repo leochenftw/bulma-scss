@@ -1,4 +1,4 @@
-$body-background-color: #fff !default;
+$body-background-color: $white !default;
 $body-size: 16px !default;
 $body-rendering: optimizeLegibility !default;
 $body-family: $family-primary !default;
@@ -68,9 +68,11 @@ a {
   color: $link;
   cursor: pointer;
   text-decoration: none;
+
   strong {
     color: currentColor;
   }
+
   &:hover {
     color: $link-hover;
   }
@@ -120,6 +122,7 @@ strong {
 
 pre {
   @include overflow-touch;
+
   background-color: $pre-background;
   color: $pre;
   font-size: 0.875em;
@@ -127,6 +130,7 @@ pre {
   padding: 1.25rem 1.5rem;
   white-space: pre;
   word-wrap: normal;
+
   code {
     background-color: transparent;
     color: currentColor;
@@ -141,6 +145,7 @@ table {
     text-align: left;
     vertical-align: top;
   }
+
   th {
     color: $text-strong;
   }

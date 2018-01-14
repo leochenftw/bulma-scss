@@ -1,8 +1,8 @@
 {
   "_from": "bulma",
-  "_id": "bulma@0.6.0",
+  "_id": "bulma@0.6.2",
   "_inBundle": false,
-  "_integrity": "sha1-T1xd5YKBDRGqDPsfMK7Ip5LQ2Sw=",
+  "_integrity": "sha1-9LHRHVrMUaeWROsKKwsQZJ09cfU=",
   "_location": "/bulma",
   "_phantomChildren": {},
   "_requested": {
@@ -19,14 +19,14 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.6.0.tgz",
-  "_shasum": "4f5c5de582810d11aa0cfb1f30aec8a792d0d92c",
+  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.6.2.tgz",
+  "_shasum": "f4b1d11d5acc51a79644eb0a2b0b10649d3d71f5",
   "_spec": "bulma",
   "_where": "/Users/leochen/Armory",
   "author": {
     "name": "Jeremy Thomas",
     "email": "bbxdesign@gmail.com",
-    "url": "http://jgthms.com"
+    "url": "https://jgthms.com"
   },
   "bugs": {
     "url": "https://github.com/jgthms/bulma/issues"
@@ -47,7 +47,7 @@
     "LICENSE",
     "README.md"
   ],
-  "homepage": "http://bulma.io",
+  "homepage": "https://bulma.io",
   "keywords": [
     "css",
     "sass",
@@ -74,8 +74,9 @@
     "start": "npm run build-sass -- --watch",
     "start-docs": "npm run docs-sass -- --watch",
     "start-test": "npm run test-sass -- --watch",
-    "test-sass": "node-sass --output-style expanded docs/bulma-test.sass docs/css/bulma-test.css"
+    "test-sass": "node-sass --output-style expanded docs/bulma-test.sass docs/css/bulma-test.css",
+    "test-scss": "node-sass --output-style expanded docs/bulma-test.scss docs/css/bulma-test.css"
   },
   "style": "bulma/css/bulma.css",
-  "version": "0.6.0"
+  "version": "0.6.2"
 }

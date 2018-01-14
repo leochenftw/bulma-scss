@@ -1,37 +1,48 @@
 .level {
   @include block;
+
   align-items: center;
   justify-content: space-between;
+
   code {
     border-radius: $radius;
   }
+
   img {
     display: inline-block;
     vertical-align: top;
   }
+
   // Modifiers
   &.is-mobile {
     display: flex;
+
     .level-left,
     .level-right {
       display: flex;
     }
+
     .level-left + .level-right {
       margin-top: 0;
     }
+
     .level-item {
       &:not(:last-child) {
         margin-bottom: 0;
       }
+
       &:not(.is-narrow) {
         flex-grow: 1;
       }
+
       margin-right: 0.75rem;
     }
   }
+
   // Responsiveness
   @include tablet {
     display: flex;
+
     & > .level-item {
       &:not(.is-narrow) {
         flex-grow: 1;
@@ -47,10 +58,12 @@
   flex-grow: 0;
   flex-shrink: 0;
   justify-content: center;
+
   .title,
   .subtitle {
     margin-bottom: 0;
   }
+
   // Responsiveness
   @include mobile {
     &:not(:last-child) {
@@ -64,11 +77,13 @@
   flex-basis: auto;
   flex-grow: 0;
   flex-shrink: 0;
+
   .level-item {
     // Modifiers
     &.is-flexible {
       flex-grow: 1;
     }
+
     // Responsiveness
     @include tablet {
       &:not(:last-child) {
@@ -81,12 +96,14 @@
 .level-left {
   align-items: center;
   justify-content: flex-start;
+
   // Responsiveness
   @include mobile {
     & + .level-right {
       margin-top: 1.5rem;
     }
   }
+
 
   @include tablet {
     display: flex;
@@ -96,6 +113,7 @@
 .level-right {
   align-items: center;
   justify-content: flex-end;
+
   // Responsiveness
   @include tablet {
     display: flex;
