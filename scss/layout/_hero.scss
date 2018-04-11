@@ -5,44 +5,55 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   .navbar {
     background: none;
   }
+
   .tabs {
     ul {
       border-bottom: none;
     }
   }
+
   // Colors
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
+
     &.is-#{$name} {
       background-color: $color;
       color: $color-invert;
-      a:not(.button),
+
+      a:not(.button):not(.dropdown-item):not(.tag),
       strong {
         color: inherit;
       }
+
       .title {
         color: $color-invert;
       }
+
       .subtitle {
         color: rgba($color-invert, 0.9);
+
         a:not(.button),
         strong {
           color: $color-invert;
         }
       }
+
       .navbar-menu {
         @include touch {
           background-color: $color;
         }
       }
+
       .navbar-item,
       .navbar-link {
         color: rgba($color-invert, 0.7);
       }
+
       a.navbar-item,
       .navbar-link {
         &:hover,
@@ -51,27 +62,33 @@
           color: $color-invert;
         }
       }
+
       .tabs {
         a {
           color: $color-invert;
           opacity: 0.9;
+
           &:hover {
             opacity: 1;
           }
         }
+
         li {
           &.is-active a {
             opacity: 1;
           }
         }
+
         &.is-boxed,
         &.is-toggle {
           a {
             color: $color-invert;
+
             &:hover {
               background-color: rgba($black, 0.1);
             }
           }
+
           li.is-active a {
             &,
             &:hover {
@@ -82,17 +99,21 @@
           }
         }
       }
+
       // Modifiers
       &.is-bold {
         $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%);
         $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%);
+
         background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%);
+
         @include mobile {
           .navbar-menu {
             background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%);
           }
         }
       }
+
       // Responsiveness
       // +mobile
       //   .nav-toggle
@@ -109,6 +130,7 @@
    
     }
   }
+
   // Sizes
   &.is-small {
     .hero-body {
@@ -116,6 +138,7 @@
       padding-top: 1.5rem;
     }
   }
+
   &.is-medium {
     @include tablet {
       .hero-body {
@@ -124,6 +147,7 @@
       }
     }
   }
+
   &.is-large {
     @include tablet {
       .hero-body {
@@ -132,20 +156,24 @@
       }
     }
   }
+
   &.is-halfheight,
   &.is-fullheight {
     .hero-body {
       align-items: center;
       display: flex;
+
       & > .container {
         flex-grow: 1;
         flex-shrink: 1;
       }
     }
   }
+
   &.is-halfheight {
     min-height: 50vh;
   }
+
   &.is-fullheight {
     min-height: 100vh;
   }
@@ -155,7 +183,9 @@
 
 .hero-video {
   @include overlay;
+
   overflow: hidden;
+
   video {
     left: 50%;
     min-height: 100%;
@@ -164,10 +194,12 @@
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
   }
+
   // Modifiers
   &.is-transparent {
     opacity: 0.3;
   }
+
   // Responsiveness
   @include mobile {
     display: none;
@@ -176,19 +208,23 @@
 
 .hero-buttons {
   margin-top: 1.5rem;
+
   // Responsiveness
   @include mobile {
     .button {
       display: flex;
+
       &:not(:last-child) {
         margin-bottom: 0.75rem;
       }
     }
   }
 
+
   @include tablet {
     display: flex;
     justify-content: center;
+
     .button:not(:last-child) {
       margin-right: 1.5rem;
     }

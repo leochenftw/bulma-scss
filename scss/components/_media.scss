@@ -2,29 +2,36 @@
   align-items: flex-start;
   display: flex;
   text-align: left;
+
   .content:not(:last-child) {
     margin-bottom: 0.75rem;
   }
+
   .media {
     border-top: 1px solid rgba($border, 0.5);
     display: flex;
     padding-top: 0.75rem;
+
     .content:not(:last-child),
     .control:not(:last-child) {
       margin-bottom: 0.5rem;
     }
+
     .media {
       padding-top: 0.5rem;
+
       & + .media {
         margin-top: 0.5rem;
       }
     }
   }
+
   & + .media {
     border-top: 1px solid rgba($border, 0.5);
     margin-top: 1rem;
     padding-top: 1rem;
   }
+
   // Sizes
   &.is-large {
     & + .media {
@@ -53,5 +60,6 @@
   flex-basis: auto;
   flex-grow: 1;
   flex-shrink: 1;
+  overflow: auto;
   text-align: left;
 }
