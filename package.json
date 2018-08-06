@@ -1,8 +1,8 @@
 {
   "_from": "bulma",
-  "_id": "bulma@0.7.0",
+  "_id": "bulma@0.7.1",
   "_inBundle": false,
-  "_integrity": "sha1-1IAXDIdoy3dP9galqvXeqpLNpiI=",
+  "_integrity": "sha512-wRSO2LXB+qI9Pyz2id+uZr4quz5aftSN7Ay1ysr1+krzVp3utD+Ci4CeKuZdrYGc800t65b7heXBL6qw2Wo/lQ==",
   "_location": "/bulma",
   "_phantomChildren": {},
   "_requested": {
@@ -19,8 +19,8 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.7.0.tgz",
-  "_shasum": "d480170c8768cb774ff606a5aaf5deaa92cda622",
+  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.7.1.tgz",
+  "_shasum": "73c2e3b2930c90cc272029cbd19918b493fca486",
   "_spec": "bulma",
   "_where": "/Users/leochen",
   "author": {
@@ -73,5 +73,5 @@
     "start": "npm run build-sass -- --watch"
   },
   "style": "bulma/css/bulma.min.css",
-  "version": "0.7.0"
+  "version": "0.7.1"
 }
