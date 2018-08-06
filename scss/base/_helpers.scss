@@ -179,6 +179,10 @@ $alignments: ("centered": "center", "justified": "justify", "left": "left", "rig
   .has-text-#{$name} {
     color: $shade !important;
   }
+
+  .has-background-#{$name} {
+    background-color: $shade !important;
+  }
 }
 
 .has-text-weight-light {
