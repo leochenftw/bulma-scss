@@ -1,8 +1,8 @@
 {
   "_from": "bulma",
-  "_id": "bulma@0.7.1",
+  "_id": "bulma@0.7.2",
   "_inBundle": false,
-  "_integrity": "sha512-wRSO2LXB+qI9Pyz2id+uZr4quz5aftSN7Ay1ysr1+krzVp3utD+Ci4CeKuZdrYGc800t65b7heXBL6qw2Wo/lQ==",
+  "_integrity": "sha512-6JHEu8U/1xsyOst/El5ImLcZIiE2JFXgvrz8GGWbnDLwTNRPJzdAM0aoUM1Ns0avALcVb6KZz9NhzmU53dGDcQ==",
   "_location": "/bulma",
   "_phantomChildren": {},
   "_requested": {
@@ -19,10 +19,10 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.7.1.tgz",
-  "_shasum": "73c2e3b2930c90cc272029cbd19918b493fca486",
+  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.7.2.tgz",
+  "_shasum": "8e944377b74c7926558830d38d8e19eaf49f5fb6",
   "_spec": "bulma",
-  "_where": "/Users/leochen",
+  "_where": "/Users/leochen/Armory",
   "author": {
     "name": "Jeremy Thomas",
     "email": "bbxdesign@gmail.com",
@@ -73,5 +73,6 @@
     "start": "npm run build-sass -- --watch"
   },
   "style": "bulma/css/bulma.min.css",
-  "version": "0.7.1"
+  "unpkg": "css/bulma.css",
+  "version": "0.7.2"
 }
